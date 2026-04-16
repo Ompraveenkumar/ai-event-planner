@@ -138,7 +138,7 @@ const CreateEvent = () => {
       console.log("✅ AI Schedule Received:", generatedSchedule);
 
       // 🛡️ Sending data to Backend - 'category' will now properly map to MongoDB
-      await axios.post('https://localhost:5000/api/v1/add-event', 
+      await axios.post('https://ai-expense-event-tracker.onrender.com/api/v1/add-event', 
         { ...formData, ai_schedule: generatedSchedule },
         { headers: { Authorization: `Bearer ${token}` } }
       );
